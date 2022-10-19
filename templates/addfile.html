@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add file</title>
+
+    <style>
+        .resizable{
+           width: 75%;
+          height: 250px;
+          padding: 12px 10px;
+          font-size: 15px;
+          box-sizing: border-box;
+          border: 2px solid black;
+          border-radius: 7px;
+          background-color: #f8f8f8;
+          resize: none;
+          user-scalable=yes
+
+          // resizing
+          border: 2px solid;
+          resize: both;
+          overflow: auto;
+          max-height: 400px;
+          max-width: 99%;
+          }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Add python file</h1>
+
+        <form action="/add-file" method="post">
+            <input name="filename" type="text" placeholder="File name">
+            <br><br>
+
+            <div class="resizable">
+                <textarea placeholder="Contents of file" name="content" style="width: 95%; height: 95%; border: 0px solid;"></textarea>
+            </div>
+
+            <br><br>
+            <button type="submit">Add file</button>
+        </form>
+    </center>
+</body>
+</html>

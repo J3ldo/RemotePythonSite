@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+
+    <style>
+        .resizable{
+           width: 75%;
+          height: 250px;
+          padding: 12px 10px;
+          font-size: 15px;
+          box-sizing: border-box;
+          border: 2px solid black;
+          border-radius: 7px;
+          background-color: #f8f8f8;
+          resize: none;
+          user-scalable=yes
+
+          // resizing
+          border: 2px solid;
+          resize: both;
+          overflow: auto;
+          max-height: 400px;
+          max-width: 99%;
+          }
+    </style>
+</head>
+<body>
+    <h1 align="center">Remote python execution on server.</h1>
+
+    <h2 align="center">Index</h2>
+
+    <center>
+        <h4><a href="/set-pass">Change password</a></h4>
+        <h4><a href="/exec-python">Execute python</a></h4>
+        <h4><a href="/add-file">Add python file to files</a></h4>
+        <h4><a href="/delete-file">Delete existing file</a></h4>
+    </center>
+
+    <h2 align="center">Execute python code</h2>
+    <center>
+        <form action="/process-python" method="post">
+            <div class="resizable">
+                <textarea placeholder="Python code" name="code" style="width: 95%; height: 95%; border: 0px solid;"></textarea>
+            </div>
+
+            <br><br>
+            <button type="submit">Execute python</button>
+        </form>
+    </center>
+</body>
+</html>
